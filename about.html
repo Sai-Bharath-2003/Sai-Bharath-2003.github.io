@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body style="background-color:rgb(25, 24, 37);"></body>
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer;
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div style="text-align:center">
+  <h2 style = "color: rgba(227, 132, 255)"> Image Gallery</h2>
+  <p style = "color: rgb(227, 132, 255)">Take a look around of some amazing shots from Movies</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column" >
+    <img src="https://www.indiewire.com/wp-content/uploads/2019/04/maxresdefault-1-1.jpg?w=1280" alt="Nature" border:hidden width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://www.indiewire.com/wp-content/uploads/2019/04/dunkirk3.jpg?w=1280" alt="Snow" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column" >
+    <img src="https://www.indiewire.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-23-at-12.05.42-PM.png?w=1278" alt="Nature" border:hidden width = "350" height ="200" onclick="myFunction(this);"> 
+  </div>
+  <div class="column">
+    <img src="https://www.indiewire.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-23-at-6.32.46-PM.png?w=1273" alt="Snow" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src= "https://www.indiewire.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-23-at-12.05.11-PM.png?w=1276" alt="Lights" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://www.indiewire.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-23-at-12.16.08-PM.png?w=1272"alt="Lights" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column" >
+    <img src="https://www.indiewire.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-23-at-6.32.08-PM.png?w=1276" alt="Nature" border:hidden width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="https://www.indiewire.com/wp-content/uploads/2019/04/11facd9489d53ed2c6997533350e1fe3.jpg?w=1280" alt="Snow" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src= "https://www.indiewire.com/wp-content/uploads/2019/04/0f1bf5bbafa8349400924c5b6bea7e37.jpg?w=1280"alt="Mountains" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src= "https://www.indiewire.com/wp-content/uploads/2019/04/nolan19.jpg?w=1280"alt="Lights" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src= "https://www.indiewire.com/wp-content/uploads/2022/08/Oppenheimer.jpeg?w=1280"alt="Lights" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src= "https://www.indiewire.com/wp-content/uploads/2021/03/tenet-reverse.png?w=1280"alt="Lights" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src= "https://www.indiewire.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-23-at-12.49.46-PM.png?w=1280"alt="Lights" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src= "https://www.indiewire.com/wp-content/uploads/2019/04/nolan10.jpg?w=1280"alt="Lights" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src= "https://www.indiewire.com/wp-content/uploads/2019/04/nolan15.jpg?w=1280"alt="Lights" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src= "https://www.indiewire.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-23-at-7.20.02-PM.png?w=1280"alt="Lights" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src= "https://www.indiewire.com/wp-content/uploads/2019/04/inception-411.jpg.optimal.jpg?w=1280"alt="Lights" width = "350" height ="200" onclick="myFunction(this);">
+  </div>
+
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>
