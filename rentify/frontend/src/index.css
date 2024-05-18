@@ -1,0 +1,22 @@
+/* Reset default margin and padding */
+html, body, #root {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply some basic styling to the body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Style the root element of your application */
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Add styles for other elements as needed */
+  
